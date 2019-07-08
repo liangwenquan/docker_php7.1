@@ -31,8 +31,8 @@ services:
             - "16379:6379"
 
     #内网 registry-internal.cn-hangzhou.aliyuncs.com/pangxiaobo/php7_nginx:v1
-    phalcon:
-        container_name: phalcon
+    php_nginx:
+        container_name: php_nginx
         image: registry.cn-hangzhou.aliyuncs.com/liangwenquan/php7_nginx
         restart: always
         privileged: true
@@ -40,7 +40,6 @@ services:
             - mysql
             - redis
         volumes:
-            #- /home/docker_user/pang:/home
             - /Users/mytoken/Downloads/personal/docker/phalcon:/var/www/app
         ports: 
             - "8081:80"
