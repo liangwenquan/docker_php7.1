@@ -8,13 +8,13 @@ services:
         restart: always
         privileged: true
         environment:
-            MYSQL_ROOT_PASSWORD: "pang123"
+            MYSQL_ROOT_PASSWORD: "lwq123"
             MYSQL_USER: "root"
-            MYSQL_PASSWORD: "pang123"
+            MYSQL_PASSWORD: "lwq123"
             #MYSQL_DATABASE: "test"
         volumes:
             #- /home/docker/mysql:/var/lib/mysql
-            - /Users/xiaobopang/Downloads/personal/docker/mysql:/var/lib/mysql
+            - /Users/mytoken/Downloads/personal/docker/mysql:/var/lib/mysql
         ports:
             - "13306:3306"
 
@@ -22,18 +22,18 @@ services:
     redis:
         container_name: redis
         image: redis:3.2.10
-        command: redis-server --requirepass pang123
+        command: redis-server --requirepass lwq123
         restart: always
         privileged: true
         volumes:
-            - /Users/xiaobopang/Downloads/personal/docker/redis:/data
+            - /Users/mytoken/Downloads/personal/docker/redis:/data
         ports:
             - "16379:6379"
 
     #内网 registry-internal.cn-hangzhou.aliyuncs.com/pangxiaobo/php7_nginx:v1
     phalcon:
         container_name: phalcon
-        image: registry.cn-hangzhou.aliyuncs.com/pangxiaobo/php7_nginx:v1
+        image: registry.cn-hangzhou.aliyuncs.com/liangwenquan/php7_nginx
         restart: always
         privileged: true
         links:
@@ -41,7 +41,7 @@ services:
             - redis
         volumes:
             #- /home/docker_user/pang:/home
-            - /Users/xiaobopang/Downloads/personal/docker/phalcon:/var/www/app
+            - /Users/mytoken/Downloads/personal/docker/phalcon:/var/www/app
         ports: 
             - "8081:80"
             - "8082:8082"
