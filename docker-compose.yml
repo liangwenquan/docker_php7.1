@@ -14,7 +14,7 @@ services:
             #MYSQL_DATABASE: "test"
         volumes:
             #- /home/docker/mysql:/var/lib/mysql
-            - /Users/mytoken/Downloads/personal/docker/mysql:/var/lib/mysql
+            - /Users/mytoken/personal/docker/mysql:/var/lib/mysql
         ports:
             - "13306:3306"
 
@@ -26,7 +26,7 @@ services:
         restart: always
         privileged: true
         volumes:
-            - /Users/mytoken/Downloads/personal/docker/redis:/data
+            - /Users/mytoken/personal/docker/redis:/data
         ports:
             - "16379:6379"
 
@@ -39,7 +39,7 @@ services:
             - mysql
             - redis
         volumes:
-            - /Users/mytoken/Downloads/personal/docker/www:/var/www/app
+            - /Users/mytoken/personal/docker/www:/var/www/app
         ports: 
             - "8081:80"
             - "8082:8082"
