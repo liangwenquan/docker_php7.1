@@ -1,2 +1,4 @@
-# docker_php7.1
-mac本地docker开发环境
+Docker container for php7.1-fpm and nginx.
+php-fpm nginx 开发测试环境。
+author:pangxiaobo
+email:10846295@qq.com
