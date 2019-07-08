@@ -39,7 +39,7 @@ services:
             - mysql
             - redis
         volumes:
-            - /Users/mytoken/Downloads/personal/docker/php:/var/www/app
+            - /Users/mytoken/Downloads/personal/docker/www:/var/www/app
         ports: 
             - "8081:80"
             - "8082:8082"
