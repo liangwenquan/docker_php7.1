@@ -32,7 +32,7 @@ services:
 
     php_nginx:
         container_name: php_nginx
-        image: registry.cn-hangzhou.aliyuncs.com/liangwenquan/php7_nginx
+        image: registry.cn-hangzhou.aliyuncs.com/liangwenquan/php7_nginx:v1
         restart: always
         privileged: true
         links:
